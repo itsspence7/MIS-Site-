@@ -1,0 +1,258 @@
+:root {
+  --primary: #ffc800;
+  --dark: #212529;
+  --light: #f8f9fa;
+  --muted: #6c757d;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Roboto Slab", serif;
+  color: #212529;
+}
+
+p {
+  line-height: 1.75;
+}
+
+.page-section {
+  padding: 6rem 0;
+}
+
+.section-heading {
+  font-size: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+.section-subheading {
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: italic;
+  font-family: "Roboto Slab", serif;
+  margin-bottom: 4rem;
+}
+
+#mainNav {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: transparent;
+  transition: background-color 0.2s ease, padding 0.2s ease;
+}
+
+#mainNav.navbar-shrink {
+  background-color: var(--dark);
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+#mainNav .navbar-brand {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+}
+
+#mainNav .navbar-nav .nav-link {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.05rem;
+  margin-left: 1rem;
+}
+
+#mainNav .navbar-nav .nav-link:hover,
+#mainNav .navbar-nav .nav-link.active {
+  color: var(--primary);
+}
+
+.masthead {
+  padding-top: 13rem;
+  padding-bottom: 10rem;
+  text-align: center;
+  color: #fff;
+  background:
+    linear-gradient(rgba(33, 37, 41, 0.7), rgba(33, 37, 41, 0.7)),
+    url("images/IMG_5372.jpeg") center center / cover no-repeat;
+}
+
+.masthead-subheading {
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.masthead-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 3.25rem;
+  margin-bottom: 2rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.btn-xl {
+  padding: 1.25rem 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: #212529;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #e6b400;
+  border-color: #e6b400;
+  color: #212529;
+}
+
+.service-card {
+  padding: 2rem 1rem;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.08);
+}
+
+.timeline {
+  position: relative;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 40px;
+  width: 2px;
+  content: "";
+  background-color: #e9ecef;
+}
+
+.timeline > li {
+  position: relative;
+  min-height: 80px;
+  margin-bottom: 3rem;
+}
+
+.timeline > li::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.timeline > li .timeline-panel {
+  position: relative;
+  float: right;
+  width: 100%;
+  padding: 0 1rem 0 6.5rem;
+  text-align: left;
+}
+
+.timeline > li .timeline-image {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  border: 6px solid #e9ecef;
+  border-radius: 100%;
+  background-color: var(--primary);
+}
+
+.timeline > li .timeline-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.timeline > li .timeline-heading h4 {
+  margin-top: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+.timeline > li .timeline-heading .subheading {
+  text-transform: none;
+}
+
+.timeline > li .timeline-body > p {
+  margin-bottom: 0;
+}
+
+#contact {
+  background-color: var(--dark);
+}
+
+.contact-photo {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border: 0.5rem solid rgba(255, 255, 255, 0.15);
+}
+
+.btn-social {
+  width: 3.25rem;
+  height: 3.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  font-size: 1.1rem;
+}
+
+.footer {
+  background-color: #fff;
+}
+
+@media (min-width: 768px) {
+  .masthead-subheading {
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+  }
+
+  .masthead-heading {
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+  }
+
+  .timeline::before {
+    left: 50%;
+  }
+
+  .timeline > li {
+    min-height: 170px;
+    margin-bottom: 4rem;
+  }
+
+  .timeline > li .timeline-panel {
+    width: 41%;
+    padding: 0 2rem 1rem 0;
+    text-align: right;
+  }
+
+  .timeline > li .timeline-image {
+    left: 50%;
+    width: 160px;
+    height: 160px;
+    margin-left: -80px;
+  }
+
+  .timeline > li.timeline-inverted .timeline-panel {
+    float: right;
+    padding: 0 0 1rem 2rem;
+    text-align: left;
+  }
+}
